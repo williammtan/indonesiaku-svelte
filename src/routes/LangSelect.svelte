@@ -22,7 +22,7 @@
             code: "id"
         },
         {
-            name: "Bali",
+            name: "Balinese",
             code: "ban"
         },
         // {
