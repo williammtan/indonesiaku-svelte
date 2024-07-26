@@ -8,7 +8,7 @@ export async function POST({ request }) {
         return json({ error: 'Invalid request parameters' }, { status: 400 });
     }
 
-    const prompt = `Translate this from ${sourceLanguage.name} to ${targetLanguage.name}:\n${sourceLanguage.name}: ${text}\n\n${targetLanguage.name}:`
+    const prompt = `Translate this from ${sourceLanguage.name} to ${targetLanguage.name}:\n${sourceLanguage.name}: ${text}\n${targetLanguage.name}:`
     let res = await fetch(VLLM_ENDPOINT + "/v1/completions",
         {
             method: "POST",
@@ -22,7 +22,8 @@ export async function POST({ request }) {
                 model: VLLM_MODEL_NAME,
                 prompt,
                 max_tokens: 256,
-                temperature: 0
+                temperature: 0,
+                // top_k: 2
             })
         }
     )
