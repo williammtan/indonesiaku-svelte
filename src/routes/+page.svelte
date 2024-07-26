@@ -52,6 +52,11 @@
     }
 </script>
     
+<svelte:head>
+	<title>Indonesiaku | Translate</title>
+    <meta name="robots" content="noindex nofollow" />
+</svelte:head>
+
 <section>
     <div class="container">
         <LangSelect on:swap={swap} on:translate={translate} bind:sourceLanguage={sourceLanguage} bind:targetLanguage={targetLanguage} />
