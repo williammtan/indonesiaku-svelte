@@ -37,8 +37,8 @@ export async function POST({ request }) {
         },
         body: JSON.stringify({
             source: [text],  // Wrap text in an array as required by the API
-            src_lang: sourceLanguage.id,
-            tgt_lang: targetLanguage.id
+            src_lang: sourceLanguage.nllb_code,
+            tgt_lang: targetLanguage.nllb_code
         })
     });
 
