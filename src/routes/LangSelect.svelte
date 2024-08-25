@@ -15,15 +15,18 @@
     const languages = [
         {
             name: "English",
-            code: "en"
+            code: "en",
+            nllb_code: "eng_Latn"
         },
         {
             name: "Indonesian",
-            code: "id"
+            code: "id",
+            nllb_code: "ind_Latn"
         },
         {
             name: "Balinese",
-            code: "ban"
+            code: "ban",
+            nllb_code: "ban_Latn"
         },
         // {
         //     name: "Jawa",

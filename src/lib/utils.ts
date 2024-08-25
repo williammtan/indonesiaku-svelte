@@ -1,6 +1,7 @@
 export interface Language {
   name: string;
   code: string;
+  nllb_code: string;
 }
 
 export function shuffle(array: any[]): any[] {
