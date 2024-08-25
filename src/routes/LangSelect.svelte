@@ -28,6 +28,11 @@
             code: "ban",
             nllb_code: "ban_Latn"
         },
+        {
+            name: "Minangkabau",
+            code: "min",
+            nllb_code: "min_Latn"
+        }
         // {
         //     name: "Jawa",
         //     code: "jv"
