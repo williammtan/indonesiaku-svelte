@@ -2,10 +2,14 @@ import { json } from '@sveltejs/kit'
 import { VLLM_ENDPOINT, VLLM_MODEL_NAME, VLLM_API_KEY, NLLB_ENDPOINT } from '$env/static/private';
 
 export async function POST({ request }) {
-    const { sourceLanguage, targetLanguage, text } = await request.json()
+    let { sourceLanguage, targetLanguage, text } = await request.json()
 
 	if (!sourceLanguage || !targetLanguage || !text) {
         return json({ error: 'Invalid request parameters' }, { status: 400 });
+    }
+
+    if (Array.isArray(text)) {
+        text = text[0];
     }
 
     // const prompt = `Translate this from ${sourceLanguage.name} to ${targetLanguage.name}:\n${sourceLanguage.name}: ${text}\n${targetLanguage.name}:`
