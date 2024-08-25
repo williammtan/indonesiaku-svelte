@@ -33,12 +33,12 @@ export async function POST({ request }) {
     const res = await fetch(NLLB_ENDPOINT + "/translate", {
         method: "POST",
         headers: {
-            'Content-Type': "application/x-www-form-urlencoded",
+            'Content-Type': "application/json",
         },
-        body: new URLSearchParams({
-            source: text,
-            src_lang: sourceLanguage.nllb_code,
-            tgt_lang: targetLanguage.nllb_code
+        body: JSON.stringify({
+            source: [text],  // Wrap text in an array as required by the API
+            src_lang: sourceLanguage.id,
+            tgt_lang: targetLanguage.id
         })
     });
 
