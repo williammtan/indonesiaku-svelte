@@ -54,7 +54,11 @@
     
 <svelte:head>
 	<title>Indonesiaku | Translate</title>
-    <meta name="robots" content="noindex nofollow" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Indonesiaku Translator offers free, instant translations between Indonesian regional languages, supporting Javanese, Balinese, Minang and more to preserve local heritage." />
+    <meta name="keywords" content="Indonesian regional language translator, Javanese translator, Sundanese translator, Balinese translator, Minang translator, language revitalization, Indonesian dialect translation" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://www.indonesiaku.com/" />
 </svelte:head>
 
 <section>
