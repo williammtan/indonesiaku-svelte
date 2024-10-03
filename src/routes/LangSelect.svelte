@@ -35,11 +35,13 @@
         },
         {
             name: "Jawa",
-            code: "jav_Latn",
+            code: "jv",
+            nllb_code: "jav_Latn"
         },
         {
             name: "Sunda",
-            code: "sun_Latn",
+            code: "su",
+            nllb_code: "sun_Latn"
         },
     ] // TODO: make to separate central file later
     
