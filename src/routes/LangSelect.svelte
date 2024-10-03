@@ -8,8 +8,8 @@
     let innerHeight = 0;
     let innerWidth = 0;
     
-    $: isMobile = innerWidth <= 800;
-    
+    // $: isMobile = innerWidth <= 800;
+    let isMobile = true; // TODO: TEMPORARY FIX
 
     export const showChips = 3;
     const languages = [
@@ -32,15 +32,15 @@
             name: "Minangkabau",
             code: "min",
             nllb_code: "min_Latn"
-        }
-        // {
-        //     name: "Jawa",
-        //     code: "jv"
-        // },
-        // {
-        //     name: "Sunda",
-        //     code: "su"
-        // },
+        },
+        {
+            name: "Jawa",
+            code: "jav_Latn",
+        },
+        {
+            name: "Sunda",
+            code: "sun_Latn",
+        },
     ] // TODO: make to separate central file later
     
     function getRandomLanguages(exclude_language: Language | undefined): Language[] {
